@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MindRx State Definition",
+  "description": "Schema for cognitive state profile definitions",
+  "type": "object",
+  "required": ["name", "description", "parameters", "behavior", "system_prompt"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique identifier for the state"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the cognitive effect"
+    },
+    "parameters": {
+      "type": "object",
+      "description": "LLM generation parameters",
+      "properties": {
+        "temperature": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "description": "Controls randomness (0-2)"
+        },
+        "top_p": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Nucleus sampling threshold (0-1)"
+        },
+        "frequency_penalty": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2,
+          "description": "Penalize repeated tokens (-2 to 2)"
+        },
+        "presence_penalty": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2,
+          "description": "Penalize tokens already in context (-2 to 2)"
+        }
+      },
+      "required": ["temperature"]
+    },
+    "behavior": {
+      "type": "object",
+      "description": "Cognitive behavior descriptors",
+      "properties": {
+        "association": {
+          "type": "string",
+          "enum": ["tight", "normal", "loose", "fragmented"],
+          "description": "How ideas connect"
+        },
+        "coherence": {
+          "type": "string",
+          "enum": ["strict", "normal", "drifting", "dissolving"],
+          "description": "Logical consistency"
+        },
+        "pacing": {
+          "type": "string",
+          "enum": ["slow", "normal", "fast", "erratic"],
+          "description": "Response rhythm"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["low", "normal", "high", "inflated"],
+          "description": "Certainty level"
+        }
+      },
+      "required": ["association", "coherence", "pacing", "confidence"]
+    },
+    "system_prompt": {
+      "type": "string",
+      "description": "Instructions that shape the AI's persona"
+    }
+  }
+}

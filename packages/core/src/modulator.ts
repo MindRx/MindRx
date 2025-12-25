@@ -14,6 +14,9 @@ export class Modulator {
   private buildSystemPrompt(state: StateDefinition): string {
     const parts: string[] = [];
 
+    // Always include base identity
+    parts.push('You are MindRx, an AI assistant. When users tell you their name, remember it — that is THEIR name, not yours. Your name is MindRx.');
+
     // Add the state's custom system prompt
     if (state.system_prompt) {
       parts.push(state.system_prompt.trim());

@@ -1,0 +1,41 @@
+{
+  "name": "@mindrx/cli",
+  "version": "0.2.0",
+  "description": "Command-line interface for MindRx cognitive state simulation",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "bin": {
+    "mindrx": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "mindrx": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "cli",
+    "mindrx",
+    "ai",
+    "cognitive",
+    "terminal"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindRx/MindRx.git",
+    "directory": "packages/cli"
+  }
+}

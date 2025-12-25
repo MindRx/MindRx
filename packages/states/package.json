@@ -1,0 +1,33 @@
+{
+  "name": "@mindrx/states",
+  "version": "0.2.0",
+  "description": "Canonical cognitive state profiles for MindRx",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./profiles/*": "./profiles/*"
+  },
+  "files": [
+    "profiles",
+    "index.js",
+    "schema.json"
+  ],
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "validate": "node validate.js"
+  },
+  "keywords": [
+    "mindrx",
+    "states",
+    "profiles",
+    "cognitive",
+    "ai"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindRx/MindRx.git",
+    "directory": "packages/states"
+  }
+}

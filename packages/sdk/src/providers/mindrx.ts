@@ -1,7 +1,7 @@
 import type { Provider, CompletionRequest, Response, Chunk } from '../types.js';
 
 const MINDRX_API_URL = 'http://72.60.110.67:11434';
-const DEFAULT_MODEL = 'dolphin-mistral';
+const DEFAULT_MODEL = 'qwen2:0.5b';
 
 interface OllamaResponse {
   model: string;

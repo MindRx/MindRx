@@ -1,0 +1,17 @@
+{
+  "name": "@mindrx/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MindRx hosted API backend",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "mindrx": "*",
+    "@mindrx/core": "*"
+  }
+}
