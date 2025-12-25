@@ -1,6 +1,5 @@
 import type { Provider, CompletionRequest, Response, Chunk } from '../types.js';
 
-// MindRx hosted Ollama backend
 const MINDRX_API_URL = 'http://72.60.110.67:11434';
 const DEFAULT_MODEL = 'dolphin-mistral';
 
@@ -65,7 +64,7 @@ export class MindRxProvider implements Provider {
     return {
       text: data.message?.content || '',
       state: '',
-      model: 'mindrx',  // White-label: don't expose underlying model
+      model: 'mindrx',
       usage: data.prompt_eval_count && data.eval_count
         ? {
             promptTokens: data.prompt_eval_count,
