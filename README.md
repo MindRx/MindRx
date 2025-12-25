@@ -217,8 +217,6 @@ done
 
 <div align="center">
 
-**This is fiction. The AI is not intoxicated.**
-
-MIT License · [Contributing](./CONTRIBUTING.md) · [Disclaimer](./DISCLAIMER.md) · [mindrx.tech](https://mindrx.tech)
+MIT License · [mindrx.tech](https://mindrx.tech)
 
 </div>

@@ -225,8 +225,6 @@ List all available cognitive states.
 
 <div align="center">
 
-MIT License
-
-**This is fiction. The AI is not intoxicated.**
+MIT License · [mindrx.tech](https://mindrx.tech)
 
 </div>
