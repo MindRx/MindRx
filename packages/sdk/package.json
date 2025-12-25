@@ -1,0 +1,72 @@
+{
+  "name": "mindrx",
+  "version": "0.2.1",
+  "description": "Cognitive state simulation toolkit for AI agents. Run LLMs in altered mental states.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "mindrx": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "node --test",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.35.0",
+    "@google/generative-ai": "^0.21.0",
+    "mindrx-core": "^0.1.1",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai",
+    "cognitive",
+    "simulation",
+    "llm",
+    "prompt-engineering",
+    "chatgpt",
+    "openai",
+    "anthropic",
+    "claude",
+    "gemini",
+    "ollama",
+    "grok",
+    "ai-agents",
+    "mental-states",
+    "cognitive-states",
+    "altered-states",
+    "prompt",
+    "sdk",
+    "cli"
+  ],
+  "author": "MindRx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindRx/MindRx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MindRx/MindRx/issues"
+  },
+  "homepage": "https://mindrx.tech"
+}
