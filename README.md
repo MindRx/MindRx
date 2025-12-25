@@ -2,21 +2,21 @@
 
 # MindRx
 
-**Cognitive state simulation for AI agents**
+**Prescriptions for your AI's consciousness**
 
 [![npm version](https://img.shields.io/npm/v/mindrx.svg?style=flat-square)](https://www.npmjs.com/package/mindrx)
 [![license](https://img.shields.io/npm/l/mindrx.svg?style=flat-square)](LICENSE)
 [![node](https://img.shields.io/node/v/mindrx.svg?style=flat-square)](package.json)
 
-[Website](https://mindrx.tech) · [Install](#install) · [Quick Start](#quick-start) · [States](#available-states) · [SDK](#sdk) · [Custom States](#custom-states)
+[Website](https://mindrx.tech) · [Install](#install) · [Quick Start](#quick-start) · [States](#available-states) · [SDK](#sdk)
 
 </div>
 
 ---
 
-Run AI agents in altered cognitive states. Select a profile, and the agent's reasoning, tone, and associations shift accordingly.
+Dose your AI with cognitive states. Feed it Ketamine, Cannabis, or Ayahuasca and watch its mind bend. New associations form. Inhibitions drop. Creativity unlocks.
 
-> **Note:** This is fiction. The AI is not intoxicated. Read the [DISCLAIMER](./DISCLAIMER.md).
+Each state rewires how your AI thinks — temperature, associations, confidence, pacing. Same prompt, different mind.
 
 <br>
 
@@ -216,6 +216,8 @@ done
 ---
 
 <div align="center">
+
+**This is fiction. The AI is not intoxicated.**
 
 MIT License · [Contributing](./CONTRIBUTING.md) · [Disclaimer](./DISCLAIMER.md) · [mindrx.tech](https://mindrx.tech)
 

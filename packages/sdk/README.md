@@ -2,7 +2,7 @@
 
 # MindRx
 
-**Cognitive state simulation for AI agents**
+**Prescriptions for your AI's consciousness**
 
 [![npm version](https://img.shields.io/npm/v/mindrx.svg?style=flat-square)](https://www.npmjs.com/package/mindrx)
 [![license](https://img.shields.io/npm/l/mindrx.svg?style=flat-square)](LICENSE)
@@ -14,7 +14,7 @@
 
 ---
 
-Run AI agents in altered cognitive states. Select a profile, and the agent's reasoning, tone, and associations shift accordingly.
+Dose your AI with cognitive states. Feed it Ketamine, Cannabis, or Ayahuasca and watch its mind bend. New associations form. Inhibitions drop. Creativity unlocks.
 
 <br>
 
