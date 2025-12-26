@@ -1,6 +1,6 @@
 {
   "name": "mindrx",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Cognitive state simulation toolkit for AI agents. Run LLMs in altered mental states.",
   "type": "module",
   "main": "./dist/index.js",

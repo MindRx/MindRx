@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { useStore } from '@/stores/store';
 import { TerminalLine } from './TerminalLine';
 
@@ -27,6 +28,23 @@ export function TerminalOutput() {
             <p className="text-text-muted text-sm mb-6">
               Cognitive state simulation for AI
             </p>
+            
+            {/* Agent Creation CTA */}
+            <div className="mb-6">
+              <Link
+                href="/agents"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-lg hover:shadow-purple-500/25 group"
+              >
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <span className="font-medium">Create AI Agent</span>
+              </Link>
+              <p className="text-xs text-text-muted mt-2">
+                Design custom AI agents with unique personalities and cognitive states
+              </p>
+            </div>
+            
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bg-tertiary/50 border border-white/5">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-xs text-text-secondary">

@@ -52,6 +52,21 @@ export interface SSEEvent {
 
 export type ConnectionStatus = 'connected' | 'streaming' | 'error' | 'idle';
 
+export interface Agent {
+  id: string;
+  name: string;
+  description: string;
+  provider: ProviderName;
+  model: string;
+  state: string;
+  intensity: number;
+  systemPrompt: string;
+  apiKey?: string;
+  baseUrl?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface ProviderConfig {
   value: ProviderName;
   label: string;

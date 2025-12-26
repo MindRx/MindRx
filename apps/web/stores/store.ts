@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { Message, ProviderName, ConnectionStatus, StateInfo } from '@/lib/types';
+import type { Message, ProviderName, ConnectionStatus, StateInfo, Agent } from '@/lib/types';
 import { DEFAULT_PROFILES } from '@/lib/types';
 
 interface Store {
@@ -17,6 +17,11 @@ interface Store {
   showApiKeyModal: boolean;
   showOllamaModal: boolean;
   pendingProvider: ProviderName | null;
+  
+  // Agent management
+  agents: Agent[];
+  selectedAgent: Agent | null;
+  showAgentModal: boolean;
 
   // Actions
   setProfile: (profile: string) => void;
@@ -37,6 +42,14 @@ interface Store {
   setShowApiKeyModal: (show: boolean) => void;
   setShowOllamaModal: (show: boolean) => void;
   setPendingProvider: (provider: ProviderName | null) => void;
+  
+  // Agent actions
+  setAgents: (agents: Agent[]) => void;
+  addAgent: (agent: Agent) => void;
+  updateAgent: (id: string, agent: Partial<Agent>) => void;
+  removeAgent: (id: string) => void;
+  setSelectedAgent: (agent: Agent | null) => void;
+  setShowAgentModal: (show: boolean) => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
@@ -53,6 +66,11 @@ export const useStore = create<Store>((set, get) => ({
   showApiKeyModal: false,
   showOllamaModal: false,
   pendingProvider: null,
+  
+  // Agent state
+  agents: [],
+  selectedAgent: null,
+  showAgentModal: false,
 
   setProfile: (profile) => set({ profile }),
   setIntensity: (intensity) => set({ intensity }),
@@ -82,4 +100,19 @@ export const useStore = create<Store>((set, get) => ({
   setShowApiKeyModal: (showApiKeyModal) => set({ showApiKeyModal }),
   setShowOllamaModal: (showOllamaModal) => set({ showOllamaModal }),
   setPendingProvider: (pendingProvider) => set({ pendingProvider }),
+  
+  // Agent actions
+  setAgents: (agents) => set({ agents }),
+  addAgent: (agent) => set((state) => ({ agents: [...state.agents, agent] })),
+  updateAgent: (id, updates) => set((state) => ({
+    agents: state.agents.map(agent => 
+      agent.id === id ? { ...agent, ...updates } : agent
+    )
+  })),
+  removeAgent: (id) => set((state) => ({
+    agents: state.agents.filter(agent => agent.id !== id),
+    selectedAgent: state.selectedAgent?.id === id ? null : state.selectedAgent
+  })),
+  setSelectedAgent: (agent) => set({ selectedAgent: agent }),
+  setShowAgentModal: (showAgentModal) => set({ showAgentModal }),
 }));
